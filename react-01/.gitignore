@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# dependencies kept out of iCloud sync
+/node_modules
+/node_modules.nosync
