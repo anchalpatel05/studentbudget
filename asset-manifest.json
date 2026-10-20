@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/studentbudget/static/css/main.b09db026.css",
+    "main.js": "/studentbudget/static/js/main.e775f26c.js",
+    "index.html": "/studentbudget/index.html",
+    "main.b09db026.css.map": "/studentbudget/static/css/main.b09db026.css.map",
+    "main.e775f26c.js.map": "/studentbudget/static/js/main.e775f26c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b09db026.css",
+    "static/js/main.e775f26c.js"
+  ]
+}
