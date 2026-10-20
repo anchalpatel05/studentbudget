@@ -1,0 +1,15 @@
+.menu {
+    width: 30px;
+}
+
+.menu div {
+    height: 4px;
+    margin: 5px 0;
+    background: white;
+}
+
+@media (min-width: 1000px) {
+    .menu {
+        display: none;
+    }
+}

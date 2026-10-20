@@ -1,0 +1,26 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo p {
+    margin: 0;
+}
+
+.logo .logo-icon {
+    padding: 7px 11px;
+    border-radius: 10px;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo .logo-name {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
