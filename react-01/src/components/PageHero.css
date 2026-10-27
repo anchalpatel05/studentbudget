@@ -1,0 +1,116 @@
+.page-hero {
+    padding: 60px 30px;
+    background: var(--light-green);
+    color: var(--dark);
+}
+
+.page-hero .page-hero-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-size: 44px;
+}
+
+.page-hero h1 em {
+    color: var(--green);
+    font-style: normal;
+}
+
+.page-hero p {
+    max-width: 700px;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.page-hero .page-hero-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-hero .page-hero-actions .button {
+    width: auto;
+    padding: 12px 28px;
+}
+
+/* Page colors */
+.page-hero.tracker-hero {
+    background: var(--pink);
+}
+
+.page-hero.tracker-hero h1 em {
+    color: var(--red);
+}
+
+.page-hero.savings-hero {
+    background: var(--light-yellow);
+}
+
+.page-hero.savings-hero h1 em {
+    color: var(--gold);
+}
+
+.page-hero.loans-hero {
+    background: var(--light-purple);
+}
+
+.page-hero.loans-hero h1 em {
+    color: var(--purple);
+}
+
+.page-hero.loans-hero .button-dark {
+    border-color: var(--purple);
+    background: var(--purple);
+}
+
+.page-hero.loans-hero .button-outline {
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+.page-hero.resources-hero {
+    background: linear-gradient(135deg, var(--light-green), var(--light-yellow));
+}
+
+.page-hero.resources-hero h1 {
+    color: var(--green);
+}
+
+.page-hero .budget-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.page-hero .budget-input input {
+    width: 110px;
+    border: none;
+    outline: none;
+    color: var(--red);
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+    .page-hero {
+        padding: 80px 8%;
+    }
+
+    .page-hero h1 {
+        font-size: 64px;
+    }
+}

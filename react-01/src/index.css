@@ -1,7 +1,26 @@
 :root {
     --green: #176f4e;
+    --light-green: #d2edda;
     --green-text: #b3d7ac;
     --yellow: #facb3c;
+    --white: #fafaf7;
+    --dark: #1e2038;
+    --gray: #697184;
+    --text: #536276;
+    --border: #e3e6ea;
+    --border-green: #9ccfb9;
+    --light-gray: #f5f6f8;
+    --pink: #ffdbd1;
+    --red: #c84c3a;
+    --light-yellow: #fdf3d0;
+    --yellow-border: #f5e6b0;
+    --gold: #bd860e;
+    --light-purple: #e5d0f2;
+    --purple: #7547a3;
+    --brown: #3b2d22;
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --photo-fade: rgba(0, 0, 0, 0.75);
 }
 
 * {
@@ -15,4 +34,81 @@ body {
 
 img {
     max-width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+section {
+    padding: 85px 30px 70px;
+}
+
+/* Buttons */
+.button {
+    width: 100%;
+    max-width: 330px;
+    padding: 14px;
+    border: 3px solid var(--border-green);
+    border-radius: 16px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-primary {
+    border-color: var(--yellow);
+    background: var(--yellow);
+    color: var(--green);
+}
+
+.button-dark {
+    display: inline-block;
+    border-color: var(--green);
+    background: var(--green);
+}
+
+.button-red {
+    border-color: var(--red);
+    background: var(--red);
+}
+
+.button-gold {
+    border-color: var(--gold);
+    background: var(--gold);
+}
+
+.button-outline {
+    border-color: var(--green);
+    background: white;
+    color: var(--green);
+}
+
+/* Color themes */
+.budget, .resources {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.spending {
+    background: var(--pink);
+    color: var(--red);
+}
+
+.savings {
+    background: var(--light-yellow);
+    color: var(--gold);
+}
+
+.loans {
+    background: var(--light-purple);
+    color: var(--purple);
+}
+
+@media (min-width: 1000px) {
+    section {
+        padding: 100px 8%;
+    }
 }

@@ -14,6 +14,7 @@
     text-decoration: none;
 }
 
+.main-nav a.active,
 .main-nav a:hover {
     background: var(--yellow);
     color: var(--green);
