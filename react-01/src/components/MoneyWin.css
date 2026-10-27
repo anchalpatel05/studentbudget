@@ -1,0 +1,37 @@
+.money-win {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 25px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass);
+}
+
+.money-win p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.money-win .money-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 14px;
+}
+
+@media (min-width: 1000px) {
+    .money-win {
+        width: calc(33.33% - 12px);
+    }
+}

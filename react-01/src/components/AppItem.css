@@ -1,0 +1,99 @@
+.app-item {
+    width: 100%;
+    padding: 28px;
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    background: white;
+}
+
+.app-item .app-item-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-item .app-item-head div {
+    flex: 1;
+}
+
+.app-item .app-item-head .app-item-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--light-green);
+}
+
+.app-item .app-item-icon img {
+    width: 34px;
+}
+
+.app-item h3 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.app-item .app-item-category {
+    margin: 6px 0 0;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.app-item .app-item-price {
+    align-self: flex-start;
+    margin: 0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.app-item .app-item-price.paid {
+    background: var(--light-yellow);
+    color: var(--gold);
+}
+
+.app-item .app-item-text {
+    margin: 18px 0 0;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Color options */
+.app-item.gold .app-item-category {
+    color: var(--gold);
+}
+
+.app-item.gold .app-item-head .app-item-icon {
+    background: var(--light-yellow);
+}
+
+.app-item.purple .app-item-category {
+    color: var(--purple);
+}
+
+.app-item.purple .app-item-head .app-item-icon {
+    background: var(--light-purple);
+}
+
+.app-item.red .app-item-category {
+    color: var(--red);
+}
+
+.app-item.red .app-item-head .app-item-icon {
+    background: var(--pink);
+}
+
+@media (min-width: 1000px) {
+    .app-item {
+        width: calc(33.33% - 17px);
+    }
+}

@@ -1,0 +1,49 @@
+.discount-card {
+    width: 100%;
+    padding: 28px;
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+}
+
+.discount-card .discount-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.discount-card .discount-icon {
+    margin: 0;
+    font-size: 30px;
+}
+
+.discount-card h3 {
+    flex: 1;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.discount-card .discount-tag {
+    align-self: flex-start;
+    margin: 0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.discount-card .discount-text {
+    margin: 18px 0 0;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (min-width: 1000px) {
+    .discount-card {
+        width: calc(25% - 19px);
+    }
+}

@@ -1,0 +1,51 @@
+.gov-card {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px;
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    background: var(--light-gray);
+}
+
+.gov-card .gov-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--light-green);
+    font-size: 26px;
+}
+
+.gov-card h3 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.gov-card .gov-link {
+    display: block;
+    margin: 6px 0 0;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gov-card div p {
+    margin: 10px 0 0;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (min-width: 1000px) {
+    .gov-card {
+        width: calc(33.33% - 17px);
+    }
+}

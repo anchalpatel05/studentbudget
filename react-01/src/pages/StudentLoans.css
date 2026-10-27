@@ -1,0 +1,62 @@
+/* Section headings */
+.loans-section, .plans-section {
+    color: var(--dark);
+    text-align: center;
+}
+
+.loans-section h2, .plans-section h2, .traps-section h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.loans-section > p, .plans-section > p {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Loan types */
+.loans-section {
+    background: var(--white);
+}
+
+.loans-section .loan-list {
+    max-width: 1350px;
+    margin: 55px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+}
+
+/* Repayment plans */
+.plans-section {
+    background: white;
+}
+
+.plans-section .plan-list {
+    max-width: 1160px;
+    margin: 55px auto 0;
+    text-align: left;
+}
+
+/* Debt traps */
+.traps-section {
+    background: var(--white);
+}
+
+.traps-section .traps-content {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.traps-section h2 {
+    margin: 0 0 35px;
+    color: var(--dark);
+}
+
+@media (min-width: 1000px) {
+    .loans-section h2, .plans-section h2 {
+        font-size: 40px;
+    }
+}

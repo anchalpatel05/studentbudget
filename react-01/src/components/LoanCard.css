@@ -1,0 +1,83 @@
+.loan-card {
+    position: relative;
+    width: 100%;
+    padding: 35px;
+    border: 2px solid transparent;
+    border-radius: 22px;
+}
+
+.loan-card.best {
+    border-color: var(--green);
+}
+
+.loan-card .card-badge {
+    position: absolute;
+    top: -16px;
+    left: 25px;
+    margin: 0;
+    padding: 5px 16px;
+    border-radius: 14px;
+    background: var(--green);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.loan-card .loan-icon {
+    margin: 0;
+    font-size: 36px;
+}
+
+.loan-card h3 {
+    margin: 20px 0 15px;
+    font-size: 22px;
+}
+
+.loan-card .loan-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.loan-card .loan-tags p {
+    margin: 0;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.loan-card .loan-tags .loan-for {
+    color: var(--text);
+}
+
+.loan-card ul {
+    margin: 20px 0 0;
+    padding-left: 22px;
+}
+
+.loan-card li {
+    padding: 6px 0;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.loan-card.budget li::marker {
+    color: var(--green);
+}
+
+.loan-card.savings li::marker {
+    color: var(--gold);
+}
+
+.loan-card.spending li::marker {
+    color: var(--red);
+}
+
+@media (min-width: 1000px) {
+    .loan-card {
+        width: calc(33.33% - 20px);
+    }
+}
