@@ -1,0 +1,17 @@
+.filter {
+    padding: 8px 18px;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    background: white;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter.active {
+    border-color: var(--red);
+    background: var(--red);
+    color: white;
+}

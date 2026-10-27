@@ -1,0 +1,55 @@
+.expense {
+    margin-bottom: 15px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: white;
+}
+
+.expense .expense-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.expense .expense-text {
+    flex: 1;
+}
+
+.expense h3 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.expense .expense-text p {
+    margin: 6px 0 0;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.expense .expense-amount {
+    margin: 0;
+    color: var(--red);
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.expense .expense-delete {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--gray);
+    font-size: 28px;
+    cursor: pointer;
+}

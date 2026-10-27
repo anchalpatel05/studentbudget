@@ -1,0 +1,27 @@
+.category {
+    margin-bottom: 22px;
+}
+
+.category .category-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category h4, .category .category-title p {
+    margin: 0;
+}
+
+.category h4 {
+    font-size: 16px;
+}
+
+.category .category-title p {
+    font-weight: bold;
+}
+
+.category .category-percent {
+    margin: 8px 0 0;
+    color: var(--gray);
+    font-size: 14px;
+}

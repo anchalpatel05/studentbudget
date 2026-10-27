@@ -1,0 +1,130 @@
+.goal-card {
+    position: relative;
+    padding: 30px;
+    border: 2px solid var(--border);
+    border-radius: 22px;
+    background: white;
+}
+
+.goal-card.completed {
+    border-color: var(--gold);
+}
+
+.goal-card .card-badge {
+    position: absolute;
+    top: -16px;
+    right: 25px;
+    margin: 0;
+    padding: 5px 16px;
+    border-radius: 14px;
+    background: var(--gold);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.goal-card .goal-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.goal-card .goal-title div {
+    flex: 1;
+}
+
+.goal-card .goal-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.goal-card h3 {
+    margin: 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+
+.goal-card .goal-title div p {
+    margin: 8px 0 0;
+    color: var(--gray);
+}
+
+.goal-card .goal-delete {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--gray);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.goal-card .goal-amount {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goal-card .goal-amount p {
+    margin: 0;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.goal-card .goal-amount .goal-saved {
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 26px;
+}
+
+.goal-card .bar {
+    margin-top: 10px;
+}
+
+.goal-card .goal-note {
+    margin: 12px 0 0;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.goal-card .add-savings {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    background: var(--light-green);
+    color: var(--green);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Color options */
+.goal-card.gold .goal-saved {
+    color: var(--gold);
+}
+
+.goal-card.purple .goal-saved {
+    color: var(--purple);
+}
+
+.goal-card.purple .add-savings {
+    border-color: var(--purple);
+    background: var(--light-purple);
+    color: var(--purple);
+}
+
+@media (min-width: 1000px) {
+    .goal-card {
+        flex: 1;
+    }
+}

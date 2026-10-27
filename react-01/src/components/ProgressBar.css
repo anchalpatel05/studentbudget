@@ -1,0 +1,17 @@
+.bar {
+    height: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: var(--light-gray);
+}
+
+.bar span {
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.bar.bar-small {
+    height: 10px;
+    margin-top: 10px;
+}

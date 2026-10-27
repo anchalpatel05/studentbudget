@@ -1,0 +1,107 @@
+.tracker-section {
+    background: var(--white);
+}
+
+.tracker-section .tracker-content {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.tracker-section .stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* Monthly progress */
+.tracker-section .progress-card {
+    margin-top: 30px;
+    padding: 25px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: white;
+}
+
+.tracker-section .progress-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tracker-section .progress-title h3, .tracker-section .progress-title p {
+    margin: 0;
+}
+
+.tracker-section .progress-title h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.tracker-section .progress-title p {
+    color: var(--gray);
+}
+
+.tracker-section .filter-list {
+    margin: 30px 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Sidebar */
+.tracker-section .tracker-side {
+    margin-top: 40px;
+}
+
+.tracker-section .category-card {
+    padding: 30px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: white;
+}
+
+.tracker-section .category-card h3 {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+
+.tracker-section .smart-tip {
+    margin-top: 25px;
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--light-yellow);
+}
+
+.tracker-section .smart-tip h4 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 16px;
+}
+
+.tracker-section .smart-tip p {
+    margin: 12px 0 0;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (min-width: 1000px) {
+    .tracker-section {
+        padding: 50px 8% 100px;
+    }
+
+    .tracker-section .tracker-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .tracker-section .tracker-main {
+        flex: 1;
+    }
+
+    .tracker-section .tracker-side {
+        width: 380px;
+        margin-top: 0;
+    }
+}

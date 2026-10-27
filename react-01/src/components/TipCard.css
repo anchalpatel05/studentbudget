@@ -1,0 +1,29 @@
+.tip-card {
+    padding: 30px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: white;
+}
+
+.tip-card .tip-icon {
+    margin: 0;
+    font-size: 36px;
+}
+
+.tip-card h3 {
+    margin: 25px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.tip-card .tip-text {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (min-width: 1000px) {
+    .tip-card {
+        flex: 1;
+    }
+}

@@ -1,0 +1,37 @@
+.goals-section {
+    background: var(--white);
+}
+
+.goals-section .goals-content {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.goals-section .stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.goals-section .goal-list, .goals-section .tip-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.goals-section h2 {
+    margin: 80px 0 0;
+    color: var(--dark);
+    font-size: 32px;
+}
+
+@media (min-width: 1000px) {
+    .goals-section {
+        padding: 50px 8% 100px;
+    }
+
+    .goals-section .goal-list, .goals-section .tip-list {
+        flex-direction: row;
+    }
+}
