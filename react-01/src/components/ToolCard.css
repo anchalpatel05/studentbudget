@@ -1,0 +1,35 @@
+.tool-card {
+    width: calc(50% - 13px);
+    aspect-ratio: 1 / 1.05;
+    padding: 26px;
+    border-radius: 20px;
+}
+
+.tool-card .tool-icon {
+    font-size: 30px;
+}
+
+.tool-card h3 {
+    font-size: 20px;
+}
+
+.tool-card p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.tool-card a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+    .tool-card {
+        width: auto;
+        min-height: 310px;
+        flex: 1;
+        aspect-ratio: auto;
+    }
+}

@@ -1,3 +1,4 @@
+/* Hero */
 .hero {
     padding: 55px 25px;
     text-align: center;
@@ -33,12 +34,237 @@
     line-height: 1.6;
 }
 
-.hero .hero-actions {
+.hero .hero-actions, .cta-card .hero-actions {
     margin-top: 38px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+}
+
+/* Facts */
+.facts {
+    padding: 35px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 0;
+    background: var(--yellow);
+    color: var(--green);
+    text-align: center;
+}
+
+/* Section headings */
+.tools-section, .life-section, .wins-section {
+    color: var(--dark);
+    text-align: center;
+}
+
+.tools-section h2, .life-section h2, .apps-header h2, .wins-section h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.tools-section > p, .life-section > p, .apps-header p, .wins-section > p {
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Tools */
+.tools-section .tool-list {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    text-align: left;
+}
+
+/* Why it matters */
+.why-section {
+    background: var(--white);
+}
+
+.why-section .why-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.why-section .why-image {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+}
+
+.why-section .why-text {
+    padding-top: 75px;
+    color: var(--gray);
+}
+
+.why-section .why-label {
+    display: inline-block;
+    margin: 0 0 30px;
+    padding: 8px 18px;
+    border-radius: 14px;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.why-section h2 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 29px;
+    line-height: 1.15;
+}
+
+.why-section h2 em {
+    color: var(--green);
+    font-style: normal;
+}
+
+.why-section .why-text > p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.why-section .topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Budget preview */
+.budget-section {
+    background: var(--green);
+    color: white;
+}
+
+.budget-section .budget-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.budget-section .budget-label {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.budget-section h2 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.budget-section .budget-intro {
+    color: var(--green-text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.budget-section .check-list {
+    margin: 25px 0 35px;
+    padding: 0;
+    list-style: none;
+}
+
+.budget-section .budget-text .button {
+    display: inline-block;
+    width: auto;
+    padding: 14px 28px;
+}
+
+/* Student life */
+.life-section {
+    background: var(--white);
+}
+
+.life-section > p {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.life-section .life-list {
+    max-width: 1150px;
+    margin: 55px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+}
+
+/* Apps */
+.apps-section {
+    background: white;
+    color: var(--dark);
+}
+
+.apps-section .apps-header, .apps-section .apps-list {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.apps-section .apps-list {
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Quick wins */
+.wins-section {
+    background: var(--light-yellow);
+}
+
+.wins-section .wins-list {
+    max-width: 1150px;
+    margin: 45px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+/* Call to action */
+.cta-section {
+    background: var(--white);
+}
+
+.cta-section .cta-card {
+    max-width: 730px;
+    margin: auto;
+    padding: 60px 30px;
+    border-radius: 22px;
+    background: var(--green);
+    color: white;
+    text-align: center;
+}
+
+.cta-card .cta-icon {
+    margin: 0;
+    font-size: 48px;
+}
+
+.cta-card h2 {
+    margin: 30px 0 0;
+    font-size: 32px;
+}
+
+.cta-card .cta-text {
+    color: var(--green-text);
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 @media (min-width: 1000px) {
@@ -50,8 +276,79 @@
         font-size: 44px;
     }
 
-    .hero .hero-actions {
+    .hero .hero-actions, .cta-card .hero-actions {
         flex-direction: row;
         justify-content: center;
+    }
+
+    .facts {
+        padding: 35px 12%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .tools-section h2, .cta-card h2 {
+        font-size: 40px;
+    }
+
+    .budget-section h2, .life-section h2, .apps-header h2 {
+        font-size: 46px;
+    }
+
+    .wins-section h2 {
+        font-size: 36px;
+    }
+
+    .tools-section .tool-list {
+        max-width: 1400px;
+        margin: 60px auto 0;
+        flex-wrap: nowrap;
+    }
+
+    .why-section .why-content {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .why-section .why-image, .why-section .why-text, .budget-section .budget-text {
+        width: 50%;
+    }
+
+    .why-section .why-text {
+        padding: 0;
+    }
+
+    .why-section h2 {
+        font-size: 34px;
+    }
+
+    .budget-section .budget-content {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .life-section .life-list {
+        flex-direction: row;
+    }
+
+    .apps-section .apps-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .apps-section .apps-header p {
+        max-width: 600px;
+    }
+
+    .apps-section .apps-header .button, .cta-card .button {
+        width: auto;
+        padding: 14px 28px;
+    }
+
+    .cta-section .cta-card {
+        padding: 80px 50px;
     }
 }

@@ -1,0 +1,49 @@
+.app-card {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+}
+
+.app-card .app-icon {
+    margin: 0;
+    font-size: 28px;
+}
+
+.app-card .app-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.app-card h3 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.app-card .app-tag {
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.app-card .app-text {
+    margin: 10px 0 0;
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (min-width: 1000px) {
+    .app-card {
+        width: calc(25% - 15px);
+    }
+}

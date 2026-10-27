@@ -1,0 +1,19 @@
+.sample-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.sample-row p {
+    margin: 0;
+}
+
+.sample-row .sample-amount {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: bold;
+}

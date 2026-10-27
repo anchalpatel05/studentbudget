@@ -1,0 +1,26 @@
+.win-card {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    border: 2px solid var(--yellow-border);
+    border-radius: 16px;
+    background: white;
+}
+
+.win-card .win-icon {
+    margin: 0;
+    font-size: 22px;
+}
+
+.win-card .win-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (min-width: 1000px) {
+    .win-card {
+        width: calc(25% - 15px);
+    }
+}

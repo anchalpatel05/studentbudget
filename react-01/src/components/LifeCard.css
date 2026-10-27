@@ -1,0 +1,45 @@
+.life-card {
+    min-height: 420px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 22px;
+    color: white;
+    background-color: var(--brown);
+    background-size: cover;
+    background-position: center;
+}
+
+.life-card .life-label {
+    margin: 0;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.life-card h3 {
+    margin: 15px 0 0;
+    font-size: 28px;
+}
+
+.life-card .life-text {
+    margin: 15px 0 25px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.life-card .button {
+    display: inline-block;
+    width: auto;
+    padding: 14px 28px;
+}
+
+@media (min-width: 1000px) {
+    .life-card {
+        width: 50%;
+    }
+}

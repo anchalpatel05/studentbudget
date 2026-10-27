@@ -1,0 +1,26 @@
+.budget-card {
+    margin-top: 50px;
+    padding: 35px;
+    border-radius: 22px;
+    background: white;
+    color: var(--dark);
+}
+
+.budget-card h3 {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+
+.budget-card .budget-result {
+    margin: 10px 0 0;
+    color: var(--gray);
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .budget-card {
+        width: 50%;
+        margin-top: 0;
+    }
+}

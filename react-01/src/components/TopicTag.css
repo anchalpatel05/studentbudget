@@ -1,0 +1,9 @@
+.topic-tag {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 13px;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+}

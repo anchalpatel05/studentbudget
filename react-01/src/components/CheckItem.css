@@ -1,0 +1,19 @@
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+.check-item i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 12px;
+}

@@ -1,0 +1,33 @@
+.money-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.money-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+}
+
+.money-input span {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.money-input.income span {
+    color: var(--green);
+}
+
+.money-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}

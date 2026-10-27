@@ -1,0 +1,22 @@
+.fact {
+    width: 50%;
+}
+
+.fact h2, .fact p {
+    margin: 0;
+}
+
+.fact h2 {
+    font-size: 30px;
+}
+
+.fact p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+    .fact {
+        width: auto;
+    }
+}
