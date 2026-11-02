@@ -4,6 +4,8 @@ import AppItem from '../components/AppItem';
 import DiscountCard from '../components/DiscountCard';
 import GovCard from '../components/GovCard';
 import MoneyWin from '../components/MoneyWin';
+import MapCard from '../components/MapCard';
+import ContactForm from '../components/ContactForm';
 import './Resources.css';
 
 // Same data as apps.json, which will be loaded from the file later
@@ -120,6 +122,18 @@ function Resources() {
           {moneyWins.map((win, index) => (
             <MoneyWin key={win} number={index + 1} text={win} />
           ))}
+        </div>
+      </section>
+
+      {/* NEW FEATURES: iframe (components/MapCard.js) and working contact form (components/ContactForm.js) */}
+      <section className="res-section white-section">
+        <div className="res-content">
+          <h2>Get Help</h2>
+          <p>Visit the financial aid office in person, or send me a message with your questions.</p>
+          <div className="contact-content">
+            <MapCard title="USC Office of Student Financial Aid" address="1244 Blossom St, Columbia, SC 29208" />
+            <ContactForm />
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,25 @@
+.spending-chart {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.spending-chart .chart-total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.spending-chart .chart-total p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.spending-chart .chart-total h4 {
+    margin: 2px 0 0;
+    color: var(--dark);
+    font-size: 20px;
+}

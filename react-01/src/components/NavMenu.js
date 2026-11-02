@@ -9,11 +9,11 @@ const links = [
   { name: 'Resources', path: '/resources' },
 ];
 
-function NavMenu() {
+function NavMenu({ open, onLinkClick }) {
   return (
-    <nav className="main-nav">
+    <nav className={open ? 'main-nav show' : 'main-nav'}>
       {links.map((link) => (
-        <NavLink key={link.path} to={link.path}>{link.name}</NavLink>
+        <NavLink key={link.path} to={link.path} onClick={onLinkClick}>{link.name}</NavLink>
       ))}
     </nav>
   );

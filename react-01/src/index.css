@@ -58,6 +58,11 @@ section {
     text-decoration: none;
 }
 
+button.button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .button-primary {
     border-color: var(--yellow);
     background: var(--yellow);

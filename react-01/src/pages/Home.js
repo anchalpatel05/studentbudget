@@ -7,6 +7,7 @@ import BudgetCheck from '../components/BudgetCheck';
 import LifeCard from '../components/LifeCard';
 import AppCard from '../components/AppCard';
 import WinCard from '../components/WinCard';
+import Slideshow from '../components/Slideshow';
 import './Home.css';
 
 const facts = [
@@ -23,6 +24,14 @@ const tools = [
   { icon: 'fa-graduation-cap', title: 'Student Loans & Credit', text: 'Understand your loans, credit score, and how to avoid debt traps while in school.', path: '/student-loans', color: 'loans' },
   { icon: 'fa-book', title: 'Resources', text: 'Apps, tools, guides, and student discounts to help you manage money smarter.', path: '/resources', color: 'resources' },
 ];
+
+const slides = [
+  { image: 'image1.jpeg', label: 'Tip 1 · Budgeting', title: 'Give every dollar a job', text: 'Split your income with the 50/30/20 rule: 50% for needs, 30% for wants, and 20% for savings and debt.' },
+  { image: 'cooking.jpeg', label: 'Tip 2 · Food', title: 'Meal prep on Sundays', text: 'Cooking in batches can save you $150–200 a month compared to eating out or ordering takeout.' },
+  { image: 'piggybank.jpeg', label: 'Tip 3 · Saving', title: 'Pay yourself first', text: 'Move $25 into savings the day you get paid. That is $1,300 a year before you even notice it is gone.' },
+  { image: 'image1.jpeg', label: 'Tip 4 · Discounts', title: 'Use your .edu email', text: 'Spotify, Amazon Prime, Adobe and more offer big student discounts — always check before you pay full price.' },
+];
+
 
 const topics = ['Budgeting Basics', 'Spending Habits', 'Savings Goals', 'Loan Guidance'];
 
@@ -107,6 +116,13 @@ function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* NEW FEATURE: Slideshow (components/Slideshow.js + Slide.js), coded from scratch */}
+      <section className="slides-section">
+        <h2>Student money tips</h2>
+        <p>Quick tips to help you spend smarter — use the arrows or dots, or let it play.</p>
+        <Slideshow slides={slides} />
       </section>
 
       <section className="budget-section">

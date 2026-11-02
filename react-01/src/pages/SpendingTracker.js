@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import PageHero from '../components/PageHero';
 import StatCard from '../components/StatCard';
 import ProgressBar from '../components/ProgressBar';
 import Filter from '../components/Filter';
 import Expense from '../components/Expense';
 import CategoryBar from '../components/CategoryBar';
+import SpendingChart from '../components/SpendingChart';
 import './SpendingTracker.css';
 
 const stats = [
@@ -43,7 +44,8 @@ function SpendingTracker() {
           Monthly budget: $
           <input type="number" defaultValue="500" />
         </label>
-        <Link className="button button-red" to="/spending-tracker">+ Add Expense</Link>
+        {/* NEW FEATURE: React Hot Toast notification */}
+        <button className="button button-red" type="button" onClick={() => toast('Adding expenses is coming soon!', { icon: '🧾' })}>+ Add Expense</button>
       </PageHero>
 
       <section className="tracker-section">
@@ -85,6 +87,8 @@ function SpendingTracker() {
           <aside className="tracker-side">
             <div className="category-card">
               <h3>Spending by Category</h3>
+              {/* NEW FEATURE: Recharts donut chart (components/SpendingChart.js) */}
+              <SpendingChart categories={categories} />
               {categories.map((category) => (
                 <CategoryBar
                   key={category.name}

@@ -54,17 +54,17 @@
 }
 
 /* Section headings */
-.tools-section, .life-section, .wins-section {
+.tools-section, .life-section, .wins-section, .slides-section {
     color: var(--dark);
     text-align: center;
 }
 
-.tools-section h2, .life-section h2, .apps-header h2, .wins-section h2 {
+.tools-section h2, .life-section h2, .apps-header h2, .wins-section h2, .slides-section h2 {
     margin: 0;
     font-size: 32px;
 }
 
-.tools-section > p, .life-section > p, .apps-header p, .wins-section > p {
+.tools-section > p, .life-section > p, .apps-header p, .wins-section > p, .slides-section > p {
     color: var(--gray);
     font-size: 16px;
     line-height: 1.6;
@@ -295,7 +295,7 @@
         font-size: 46px;
     }
 
-    .wins-section h2 {
+    .wins-section h2, .slides-section h2 {
         font-size: 36px;
     }
 
