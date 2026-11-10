@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/studentbudget/static/css/main.0faa60f7.css",
-    "main.js": "/studentbudget/static/js/main.bc3e12ab.js",
+    "main.css": "/studentbudget/static/css/main.a1d17512.css",
+    "main.js": "/studentbudget/static/js/main.83a690ee.js",
     "index.html": "/studentbudget/index.html",
-    "main.0faa60f7.css.map": "/studentbudget/static/css/main.0faa60f7.css.map",
-    "main.bc3e12ab.js.map": "/studentbudget/static/js/main.bc3e12ab.js.map"
+    "main.a1d17512.css.map": "/studentbudget/static/css/main.a1d17512.css.map",
+    "main.83a690ee.js.map": "/studentbudget/static/js/main.83a690ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.0faa60f7.css",
-    "static/js/main.bc3e12ab.js"
+    "static/css/main.a1d17512.css",
+    "static/js/main.83a690ee.js"
   ]
 }
