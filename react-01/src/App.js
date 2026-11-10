@@ -13,6 +13,9 @@
   6. React library #2 - React Hot Toast: <Toaster /> in components/Layout.js
      -> toasts when the contact form sends/fails (Resources), "+ Add Expense" (Spending Tracker)
         and "+ New Savings Goal" (Savings Goals)
+
+  Server data: pages/Resources.js pulls the "Best Finance Apps for Students" list from the
+  Render server (https://studentbudgetplanner-backend.onrender.com/api/apps), see config.js
 */
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';

@@ -31,6 +31,21 @@
     gap: 25px;
 }
 
+.res-section .res-status {
+    margin-top: 45px;
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--light-green);
+    color: var(--green);
+    font-weight: bold;
+    text-align: center;
+}
+
+.res-section .res-status.error {
+    background: var(--pink);
+    color: var(--red);
+}
+
 /* Get help */
 .res-section .contact-content {
     margin-top: 45px;

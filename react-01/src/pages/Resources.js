@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import AppItem from '../components/AppItem';
@@ -6,19 +7,8 @@ import GovCard from '../components/GovCard';
 import MoneyWin from '../components/MoneyWin';
 import MapCard from '../components/MapCard';
 import ContactForm from '../components/ContactForm';
+import { API_URL } from '../config';
 import './Resources.css';
-
-// Same data as apps.json, which will be loaded from the file later
-const apps = [
-  { _id: 1, name: 'Mint', category: 'Budgeting', price: 'FREE', description: 'Free all-in-one budgeting, spending tracking, and bill reminders. Syncs with your bank automatically.', color: '', img_name: 'images/mint.svg' },
-  { _id: 2, name: 'YNAB', category: 'Budgeting', price: 'PAID', description: '"You Need A Budget" — proactive budgeting app with a great student discount. Highly reviewed.', color: '', img_name: 'images/ynab.svg' },
-  { _id: 3, name: 'Acorns', category: 'Investing', price: 'PAID', description: 'Round up purchases and invest the spare change automatically. Great way to start investing with $0.', color: 'gold', img_name: 'images/acorns.svg' },
-  { _id: 4, name: 'Ally Bank', category: 'Savings', price: 'FREE', description: 'High-yield savings account with 4–5% APY. No minimums, no fees. Keep your emergency fund here.', color: 'purple', img_name: 'images/ally.svg' },
-  { _id: 5, name: 'Credit Karma', category: 'Credit', price: 'FREE', description: 'Free credit score monitoring, alerts, and personalized tips. Check your score without hurting it.', color: '', img_name: 'images/creditkarma.svg' },
-  { _id: 6, name: 'Venmo / Cash App', category: 'Transfers', price: 'FREE', description: 'Split bills, pay rent, and transfer money instantly. Use for splitting costs with roommates.', color: 'gold', img_name: 'images/venmo.svg' },
-  { _id: 7, name: 'GasBuddy', category: 'Transportation', price: 'FREE', description: 'Find the cheapest gas stations near you. Can save $0.20–0.50 per gallon.', color: 'red', img_name: 'images/gasbuddy.svg' },
-  { _id: 8, name: 'Goodbudget', category: 'Budgeting', price: 'FREE', description: 'Digital envelope budgeting — allocate money to categories at the start of the month.', color: '', img_name: 'images/goodbudget.svg' },
-];
 
 const discounts = [
   { icon: '🎵', name: 'Spotify Student', tag: '50% off', text: 'Half-price premium subscription with your .edu email. Also includes Hulu and Showtime.' },
@@ -56,6 +46,24 @@ const moneyWins = [
 ];
 
 function Resources() {
+  const [apps, setApps] = useState([]);
+  const [status, setStatus] = useState('loading');
+
+  // Pull the list of apps from the server
+  useEffect(() => {
+    const loadApps = async () => {
+      try {
+        const response = await fetch(`${API_URL}/api/apps`);
+        if (!response.ok) throw new Error('Request failed');
+        setApps(await response.json());
+        setStatus('loaded');
+      } catch (error) {
+        setStatus('error');
+      }
+    };
+    loadApps();
+  }, []);
+
   return (
     <>
       <PageHero
@@ -68,6 +76,9 @@ function Resources() {
         <div className="res-content">
           <h2>Best Finance Apps for Students</h2>
           <p>Tested, trusted, and student-friendly.</p>
+          {/* SERVER DATA: these apps are pulled from the Render server (/api/apps) */}
+          {status === 'loading' && <p className="res-status">Loading apps&hellip; the server may take a few seconds to wake up.</p>}
+          {status === 'error' && <p className="res-status error">Sorry, the apps could not be loaded right now. Please try again later.</p>}
           <div className="res-list">
             {apps.map((app) => (
               <AppItem
