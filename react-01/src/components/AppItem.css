@@ -3,7 +3,18 @@
     padding: 28px;
     border: 2px solid var(--border);
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
     background: white;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.app-item:hover, .app-item:focus-visible {
+    border-color: var(--border-green);
+    outline: none;
+    box-shadow: 0 12px 28px rgba(23, 111, 78, 0.12);
+    transform: translateY(-4px);
 }
 
 .app-item .app-item-head {
@@ -29,6 +40,8 @@
 
 .app-item .app-item-icon img {
     width: 34px;
+    height: 34px;
+    object-fit: contain;
 }
 
 .app-item h3 {
@@ -65,6 +78,14 @@
     color: var(--gray);
     font-size: 16px;
     line-height: 1.8;
+}
+
+.app-item .app-item-more {
+    margin: auto 0 0;
+    padding-top: 18px;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* Color options */

@@ -16,6 +16,11 @@
 
   Server data: pages/Resources.js pulls the "Best Finance Apps for Students" list from the
   Render server (https://studentbudgetplanner-backend.onrender.com/api/apps), see config.js
+  - Each app card is clickable and opens a details modal: components/AppItem.js + components/AppModal.js
+  - Add an app form (POST /api/apps, Joi on the server): components/AddAppForm.js
+    -> Resources page, "Know an app we're missing?" section right under the app list
+    -> client side validation in appRules.js matches the server's Joi rules
+    -> the new app is added to the apps state so the list updates right away
 */
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';

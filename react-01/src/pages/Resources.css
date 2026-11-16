@@ -46,6 +46,75 @@
     color: var(--red);
 }
 
+/* Add an app */
+.add-app-section {
+    background: var(--green);
+    color: white;
+}
+
+.add-app-section .add-app-content {
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.add-app-section .add-app-label {
+    margin: 0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.add-app-section h2 {
+    margin: 18px 0 0;
+    font-size: 32px;
+}
+
+.add-app-section .add-app-text > p:not(.add-app-label) {
+    color: var(--green-text);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.add-app-section .add-app-rules {
+    margin: 25px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style: none;
+}
+
+.add-app-section .add-app-rules li {
+    padding-left: 34px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.add-app-section .add-app-rules li::before {
+    content: '\2713';
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--yellow);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /* Get help */
 .res-section .contact-content {
     margin-top: 45px;
@@ -113,6 +182,25 @@
 
     .res-section .contact-content {
         flex-direction: row;
+    }
+
+    .add-app-section .add-app-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .add-app-section .add-app-text {
+        flex: 1;
+    }
+
+    .add-app-section .add-app-form {
+        width: 560px;
+        flex: none;
+    }
+
+    .add-app-section h2 {
+        font-size: 46px;
     }
 
     .money-section h2, .together-section h2 {

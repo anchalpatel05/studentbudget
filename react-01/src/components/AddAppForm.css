@@ -1,0 +1,247 @@
+.add-app-form {
+    width: 100%;
+    padding: 30px 25px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    color: var(--dark);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.add-app-form h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.add-app-form .add-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Fields */
+.add-app-form .add-field {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.add-app-form label, .add-app-form legend, .add-app-form .field-title {
+    margin: 0 0 8px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-app-form .optional {
+    margin-left: 5px;
+    margin-right: auto;
+    font-weight: normal;
+}
+
+.add-app-form .char-count {
+    font-weight: normal;
+}
+
+.add-app-form input[type="text"],
+.add-app-form input[type="url"],
+.add-app-form select,
+.add-app-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--light-gray);
+    color: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.add-app-form textarea {
+    resize: vertical;
+}
+
+.add-app-form input:focus,
+.add-app-form select:focus,
+.add-app-form textarea:focus {
+    border-color: var(--green);
+    outline: none;
+    background: white;
+}
+
+.add-app-form .has-error input,
+.add-app-form .has-error select,
+.add-app-form .has-error textarea,
+.add-app-form .has-error .icon-upload {
+    border-color: var(--red);
+}
+
+.add-app-form .field-error {
+    margin: 7px 0 0;
+    color: var(--red);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Free / Paid toggle */
+.add-app-form .price-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.add-app-form .price-toggle label {
+    margin: 0;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    display: block;
+    flex: 1;
+    background: var(--light-gray);
+    color: var(--gray);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-app-form .price-toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.add-app-form .price-toggle label.selected {
+    border-color: var(--green);
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.add-app-form .price-toggle label:focus-within {
+    border-color: var(--green);
+}
+
+.add-app-form .has-error .price-toggle label {
+    border-color: var(--red);
+}
+
+/* Icon upload */
+.add-app-form .icon-upload {
+    margin: 0;
+    padding: 12px;
+    border: 2px dashed var(--border-green);
+    border-radius: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    background: var(--light-gray);
+    cursor: pointer;
+}
+
+.add-app-form .icon-upload:hover {
+    border-color: var(--green);
+}
+
+.add-app-form .icon-input {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+}
+
+.add-app-form .icon-input:focus-visible + .icon-upload {
+    border-color: var(--green);
+}
+
+.add-app-form .icon-preview {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--green);
+    color: var(--yellow);
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.add-app-form .icon-preview img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: white;
+}
+
+.add-app-form .icon-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.add-app-form .icon-text strong {
+    color: var(--dark);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.add-app-form .icon-text span {
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Submit */
+.add-app-form .button {
+    max-width: none;
+}
+
+.add-app-form .button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.add-app-form .add-result {
+    margin: -5px 0 0;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add-app-form .add-result.good {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.add-app-form .add-result.bad {
+    background: var(--pink);
+    color: var(--red);
+}
+
+@media (min-width: 600px) {
+    .add-app-form {
+        padding: 35px;
+    }
+
+    .add-app-form .add-row {
+        flex-direction: row;
+    }
+
+    .add-app-form .add-row .add-field {
+        flex: 1;
+    }
+}

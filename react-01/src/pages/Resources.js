@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import AppItem from '../components/AppItem';
+import AppModal from '../components/AppModal';
+import AddAppForm from '../components/AddAppForm';
 import DiscountCard from '../components/DiscountCard';
 import GovCard from '../components/GovCard';
 import MoneyWin from '../components/MoneyWin';
@@ -48,6 +50,7 @@ const moneyWins = [
 function Resources() {
   const [apps, setApps] = useState([]);
   const [status, setStatus] = useState('loading');
+  const [selectedApp, setSelectedApp] = useState(null);
 
   // Pull the list of apps from the server
   useEffect(() => {
@@ -64,6 +67,12 @@ function Resources() {
     loadApps();
   }, []);
 
+  // New apps from the form go straight into state, so the list updates right away
+  const handleAppAdded = (newApp) => {
+    setApps((currentApps) => [...currentApps, newApp]);
+    setStatus('loaded');
+  };
+
   return (
     <>
       <PageHero
@@ -75,7 +84,7 @@ function Resources() {
       <section className="res-section">
         <div className="res-content">
           <h2>Best Finance Apps for Students</h2>
-          <p>Tested, trusted, and student-friendly.</p>
+          <p>Tested, trusted, and student-friendly. Click any app to see its details.</p>
           {/* SERVER DATA: these apps are pulled from the Render server (/api/apps) */}
           {status === 'loading' && <p className="res-status">Loading apps&hellip; the server may take a few seconds to wake up.</p>}
           {status === 'error' && <p className="res-status error">Sorry, the apps could not be loaded right now. Please try again later.</p>}
@@ -89,11 +98,32 @@ function Resources() {
                 description={app.description}
                 color={app.color}
                 img_name={app.img_name}
+                onSelect={() => setSelectedApp(app)}
               />
             ))}
           </div>
         </div>
       </section>
+
+      {/* ADD DATA FORM: posts a new app to the server (components/AddAppForm.js) */}
+      <section className="add-app-section">
+        <div className="add-app-content">
+          <div className="add-app-text">
+            <p className="add-app-label">Help other students</p>
+            <h2>Know an app we&rsquo;re missing?</h2>
+            <p>Share a money app that has helped you. Once it passes the checks, it&rsquo;s added to the list above for everyone to see.</p>
+            <ul className="add-app-rules">
+              <li>Name between 2 and 40 characters</li>
+              <li>Pick a category and whether it&rsquo;s free or paid</li>
+              <li>Explain why it helps in 10&ndash;200 characters</li>
+              <li>Optional website link and icon under 2MB</li>
+            </ul>
+          </div>
+          <AddAppForm onAppAdded={handleAppAdded} />
+        </div>
+      </section>
+
+      {selectedApp && <AppModal app={selectedApp} onClose={() => setSelectedApp(null)} />}
 
       <section className="res-section white-section">
         <div className="res-content">

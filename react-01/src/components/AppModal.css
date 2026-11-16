@@ -1,0 +1,174 @@
+.modal-backdrop {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 32, 56, 0.6);
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    animation: modal-fade 0.2s ease;
+}
+
+.app-modal {
+    width: 100%;
+    max-width: 520px;
+    max-height: calc(100vh - 40px);
+    border-radius: 22px;
+    overflow-y: auto;
+    background: white;
+    position: relative;
+    animation: modal-rise 0.25s ease;
+}
+
+.app-modal .modal-close {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: var(--dark);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+
+.app-modal .modal-close:hover {
+    background: var(--yellow);
+    color: var(--green);
+}
+
+/* Colored banner with the app icon */
+.app-modal .modal-banner {
+    height: 110px;
+    background: var(--light-green);
+    position: relative;
+}
+
+.app-modal .modal-icon {
+    width: 84px;
+    height: 84px;
+    border: 4px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-green);
+    position: absolute;
+    left: 30px;
+    bottom: -42px;
+}
+
+.app-modal .modal-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.app-modal .modal-body {
+    padding: 58px 30px 30px;
+}
+
+.app-modal .modal-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.app-modal .modal-tags p {
+    margin: 0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.app-modal .modal-category {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.app-modal .modal-price {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+.app-modal .modal-price.paid {
+    background: var(--light-yellow);
+    color: var(--gold);
+}
+
+.app-modal h3 {
+    margin: 16px 0 0;
+    color: var(--dark);
+    font-size: 30px;
+}
+
+.app-modal .modal-text {
+    margin: 12px 0 0;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.app-modal .modal-tip {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: var(--light-yellow);
+}
+
+.app-modal .modal-tip p {
+    margin: 0;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.app-modal .modal-actions {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-modal .modal-actions .button {
+    max-width: none;
+}
+
+/* Color options */
+.app-modal.gold .modal-banner, .app-modal.gold .modal-icon, .app-modal.gold .modal-category {
+    background: var(--light-yellow);
+    color: var(--gold);
+}
+
+.app-modal.purple .modal-banner, .app-modal.purple .modal-icon, .app-modal.purple .modal-category {
+    background: var(--light-purple);
+    color: var(--purple);
+}
+
+.app-modal.red .modal-banner, .app-modal.red .modal-icon, .app-modal.red .modal-category {
+    background: var(--pink);
+    color: var(--red);
+}
+
+@keyframes modal-fade {
+    from { opacity: 0; }
+}
+
+@keyframes modal-rise {
+    from { opacity: 0; transform: translateY(20px); }
+}
+
+@media (min-width: 600px) {
+    .app-modal .modal-actions {
+        flex-direction: row;
+    }
+
+    .app-modal .modal-actions .button {
+        flex: 1;
+    }
+}
